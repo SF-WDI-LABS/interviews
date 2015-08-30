@@ -1,9 +1,9 @@
-var CYOA = function (firstSection){
+var CYOATree = function (firstSection){
 	this.head = firstSection;
 }
 
 
-CYOA.prototype.findEarlyWin = function(){
+CYOATree.prototype.findEarlyWin = function(){
 	// set up the queue of nodes to  check for happy ending
 	var queue = [{node: this.head, numDecisions: 0}]; 
 	// console.log("queue, ", queue)
@@ -58,7 +58,7 @@ var pg13 = new CYOANode("pg13", [])
 var pg43 = new CYOANode("pg43", [pg67, pg13]);
 var pg89 = new CYOANode("pg89", []);
 var pg1 = new CYOANode("pg1", [pg43, pg89]);
-var book = new CYOA(pg1);
+var book = new CYOATree(pg1);
 // 		89L
 // 	/ 
 // 1 			67W
@@ -69,8 +69,8 @@ var book = new CYOA(pg1);
 
 console.log(book.findEarlyWin())  //2
 
-var loserBook = new CYOA(pg13);
+var loserBook = new CYOATree(pg13);
 console.log(loserBook.findEarlyWin());  // -1
 
-var immediateWinBook = new CYOA(pg67);
+var immediateWinBook = new CYOATree(pg67);
 console.log(immediateWinBook.findEarlyWin()); // 0
