@@ -1,5 +1,9 @@
 ## Smart Substring
 
+**Difficulty**: Easy
+**Concepts**: Strings, Looping
+**Optional**: Regex
+
 Write a function that takes maximum 40 characters from a string, without breaking words.  
 
 ```
