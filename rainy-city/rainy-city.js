@@ -1,5 +1,5 @@
 
-function waterVolume(arr){
+function water(arr){
 	if (arr.length === 0){
 		return 0;
 	}
@@ -10,20 +10,41 @@ function waterVolume(arr){
 
 
 	// we'll also need the height of the current building, but it's stored in arr
-	// so no need to rename it
-	// var height = arr[0];
+	// so no need to rename it  (like var height = arr[0];)
 
 	var maxI = maxIndex(arr);
-	for (var i=0; i<maxI; i++){
-		if (wall > height){
-			potential = potential + (wall-height);
+
+	// calculate the water in the first part of the buildings, 
+	// from start of block up to one at maxI
+	//console.log("forward half");
+	for (var i=0; i<=maxI; i++){
+		//console.log({wall: wall, height: arr[i], potential: potential, actual: actual})
+		if (wall > arr[i]){  // wall > current height
+			potential = potential + (wall-arr[i]);
 		} else {
 			actual = actual + potential;
 			potential = 0;
-			wall = height;
+			wall = arr[i];  // set wall height to match current height
 		}
 	}
-	
+
+	// calculate water in second part of buildings,
+	// from the end of the block back to the one at maxI
+
+	potential = 0;
+	wall = arr[arr.length-1];
+	//console.log("backward half")
+	for (var i=arr.length-1; i>=maxI; i--){
+		//console.log({wall: wall, height: arr[i], potential: potential, actual: actual})
+		if(wall > arr[i]){
+			potential = potential + (wall-arr[i]);
+		} else {
+			actual = actual + potential;
+			potential = 0;
+			wall = arr[i];  // set wall height to match current height
+		}
+	}
+
 	return actual;
 
 }
@@ -40,4 +61,25 @@ function maxIndex(arr){
 		}
 	}
 	return maxI;
+}
+
+
+var tests = [
+	{input: [0,1,2], expected: 0},
+	{input: [2,0], expected: 0},
+	{input: [1,0,1], expected: 1},
+	{input: [0,1,0], expected: 0},
+	{input: [2,0,4,0,1], expected: 3},
+	{input: [3,2,1,3,2,0], expected: 3},
+	{input: [2,1,0,4,0,1,0,2,3], expected: 12}
+];
+
+
+var got;
+for (var t=0; t<tests.length; t++){
+	console.log("\nTesting water with input ", tests[t].input);
+	console.log("\texpected: ", tests[t].expected);
+	got  = water(tests[t].input);
+	console.log("\tgot:      ", got);
+	console.log(got===tests[t].expected ? "PASS!" : "FAIL!");
 }
