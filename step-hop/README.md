@@ -1,7 +1,7 @@
 ## Step Up
 
-**Difficulty**: Hard
-**Concepts**: Dynamic Programming, Recursion
+**Difficulty**: Easy, then Harder
+**Concepts**: Recursion, Dynamic Programming
 
 Sam loves to hop up stairs. Each time she moves up stairs, she either hops up one step, or hops up two steps.  For 4 stairs, two possible paths she might take are:
 * ground, to 1, to 3, to 4, or
