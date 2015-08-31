@@ -1,4 +1,4 @@
-## Step Up
+## Step Hop
 
 **Difficulty**: Easy, then Harder
 **Concepts**: Recursion, Dynamic Programming
