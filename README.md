@@ -1,6 +1,10 @@
 # Interviews
 
-This repo contails READMEs and solutions for 4 interview problems. Their basic statements are also below.
+This repo contails READMEs and solutions for 4 interview problems. Their basic problem statements are also below.
+
+Please choose a problem that you feel comfortable with and that you think is appropriate for the candidate. 
+
+Most of the solutions provided are more efficient than a naive or brute force solution, but the candidate may start with a brute force solution. Ask the candidate to run through some test cases to check that their solution works.
 
 
 ## Rainy City
