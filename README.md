@@ -3,7 +3,7 @@
 
 ## Rainy City
 
-**Difficulty**: Medium-Hard
+**Difficulty**: Medium-Hard    
 **Concepts**: Looping and Arrays
 
 You have an array of numbers representing the heights of buildings on a perfectly-packed city block.  Assuming infinite rain is available, how much rain water will collect on top of the roofs of the city block?
@@ -68,11 +68,9 @@ Choose your own adventure books can usually either end happily, or end badly (wi
 
 ## Smart Substring
 
-## Smart Substring
-
-**Difficulty**: Easy
-**Concepts**: Strings, Looping
-**Optional**: Regex
+**Difficulty**: Easy   
+**Concepts**: Strings, Looping   
+**Optional**: Regex   
 
 Write a function that takes maximum 40 characters from a string, without breaking words.  
 
@@ -90,8 +88,9 @@ Smarter approach: `A star is a luminous sphere of plasma`.
 
 ## Step Hop
 
-**Difficulty**: Easy, then Harder
-**Concepts**: Recursion, Dynamic Programming
+**Difficulty**: Easy, then Harder   
+**Concepts**: Recursion   
+**Extension**: Dynamic Programming  
 
 Sam loves to hop up stairs. Each time she moves up stairs, she either hops up one step, or hops up two steps.  For 4 stairs, two possible paths she might take are:
 * ground, to 1, to 3, to 4, or
