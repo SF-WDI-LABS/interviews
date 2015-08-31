@@ -1,5 +1,7 @@
 # Interviews
 
+This repo contails READMEs and solutions for 4 interview problems. Their basic statements are also below.
+
 
 ## Rainy City
 
@@ -93,7 +95,24 @@ Smarter approach: `"A star is a luminous sphere of plasma"`.
 **Extension**: Dynamic Programming  
 
 Sam loves to hop up stairs. Each time she moves up stairs, she either hops up one step, or hops up two steps.  For 4 stairs, two possible paths she might take are:
-* ground, to 1, to 3, to 4, or
-* ground, to 2, to 4
 
-Write a function that, given a number of stairs, calculates how many ways my neice could possibly hop up that many stairs. 
+
+* ground, to first, to third, to fourth
+```
+                  __3__
+              _2_|
+          ___|
+      _1_|
+ ____|
+```
+
+* ground, to second, to fourth
+```
+                  __2__
+              ___|
+          _1_|
+      ___|
+ ____|
+```
+
+Write a function that, given a number of stairs, calculates how many ways Sam could possibly hop up that many stairs. 
