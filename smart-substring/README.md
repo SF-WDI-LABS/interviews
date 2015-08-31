@@ -14,5 +14,4 @@ First 40 characters: `A star is a luminous sphere of plasma he`.
 
 Smarter approach: `A star is a luminous sphere of plasma`.
 
-Test cases:
-* fewer than 40 characters total
+**Extension**: Modify your function so that we can use shorthand to save characters, by replacing "and" with "&".

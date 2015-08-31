@@ -45,5 +45,5 @@ for (var t=0; t<tests.length; t++){
 	console.log("\texpected: \""+tests[t].expected+"\"");
 	got  = smartSubstring(tests[t].input);
 	console.log("\tgot:      \""+got+"\"");
-	console.log(got===tests[t].expected ? "PASS!" : "FAIL!");
+	console.log(got===tests[t].expected ? "\tPASS!" : "\tFAIL!");
 }
