@@ -19,8 +19,7 @@ You have an array of numbers representing the heights of buildings on a perfectl
 [4, 2, 1, 3]
 ```
 
-
-Note: This can be solved with only 2 passes through the array, but start with any working solution.  
+Given solution run time: O(n), where n is the length of the array.
 
 
 
@@ -41,31 +40,11 @@ To ask the fairy about the Sword of Truth, go to page 43.
 To run back to the clearing, go to page 200.
 ```
 
-Choose your own adventure books can usually either end happily, or end badly (with the main character's death/capture/etc).  Write a program to find the minimum number of decisions that could lead to a happy ending, in a choose your own adventure book.
+Choose your own adventure books can usually either end happily, or end badly (with the main character's death/capture/etc).  Write a program to find the minimum number of decisions that could lead to a happy ending, in a choose your own adventure book. Assume that there is only one path to each ending.  Assume also that no story choices lead back to pages that have already been read.
 
-<!--## Awkward Teddy-->
+Given solution run time: O(n), where n is the number of story chunks.  
 
-<!--You're working on a robotic teddy bear toy that will teach children basic tasks. It's working for task lists that can happen in any order, like gathering each toy into the toy bin. Unfortunately, the teddy bear doesn't do very well with tasks with prerequisites. For example, the teddy bear has a tendency to congratulate users who dress a doll by putting its socks on over its shoes, or its underwear on after its pants. -->
-
-<!--```-->
-<!--Gathering Toys-->
-<!--* put the giraffee into the toy bin-->
-<!--* put the blocks into the toy bin-->
-<!--* put the doll into the toy bin-->
-<!--```-->
-
-<!--```-->
-<!--Getting Dressed-->
-<!--* put on socks-->
-<!--* put on shirt-->
-<!--* put on pants-->
-<!--* put on shoes-->
-<!--* put on underwear-->
-<!--```-->
-
-<!--Key questions:-->
-<!--* What kind of input does the teddy bear get now? (unordered lists of actions that have to be taken)-->
-
+**Bonus**: Sometimes authors do want to have two paths through the story converge. Modify your approach to let multiple paths lead to the same ending. Still assume that no story choices lead back to pages that have already been read.
 
 
 ## Smart Substring
@@ -84,9 +63,13 @@ First 40 characters: `"A star is a luminous sphere of plasma he"`.
 
 Smarter approach: `"A star is a luminous sphere of plasma"`.
 
-**Extension**: Modify your function so that we can use shorthand to save characters, by replacing "and" with "&".
+
+Given solution run time: O(1), since it only looks up to 41 characters into the string.  
+
+**Bonus**: Modify your function so that we can use shorthand to save characters, by replacing the word "and" with "&".
 
 
+Given bonus solution run time: O(n), where n is the length of the input string.  
 
 ## Step Hop
 
@@ -116,3 +99,8 @@ Sam loves to hop up stairs. Each time she moves up stairs, she either hops up on
 ```
 
 Write a function that, given a number of stairs, calculates how many ways Sam could possibly hop up that many stairs. 
+
+
+Given solution run time: O(n), where n number of stairs.  
+
+**Bonus**: Sam has learned to hop 3 steps at a time (so, for example, she could go from the ground to the third step!).  Write a function to calculate how many ways Sam could hop up a given number of stairs with this new skill.
