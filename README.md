@@ -73,7 +73,9 @@ Given solution run time: O(1), since it only looks up to 41 characters into the 
 **Bonus**: Modify your function so that we can use shorthand to save characters, by replacing the word "and" with "&".
 
 
-Given bonus solution run time: O(n), where n is the length of the input string.  
+Given bonus solution run time: O(1), since we'd only have to check up to like 82.
+
+
 
 ## Step Hop
 
