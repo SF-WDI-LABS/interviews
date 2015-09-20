@@ -1,6 +1,6 @@
 # Smart Substring
 
-**Difficulty**: Easy  
+**Difficulty**: Easy - Medium   
 **Concepts**: Strings, Looping, Testing  
 **Optional**: Regex  
 
