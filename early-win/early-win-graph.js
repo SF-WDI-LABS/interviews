@@ -11,7 +11,7 @@ CYOAGraph.prototype.findEarlyWin = function(){
 
 	// THIS TIME WE'LL ALSO NEED TO KEEP TRACK OF WHETHER WE'VE 
 	// ALREADY SEEN A NODE
-	// we'll store a hashset of pages we've seen to make it easy to check
+	// we'll store a hashset of pages we've seen to make it easy to check membership
 		// a hash is better than an array because we want to be able to 
 		// quickly see whether a particular page is in there already
 	var seen = {};
@@ -33,18 +33,16 @@ CYOAGraph.prototype.findEarlyWin = function(){
 			}
 		}
 	}
-	// we've gone through the entire story tree, and there are no happy endings
+	// we've gone through the entire story graph, and there are no happy endings
 	// interviewees should ask what to do here
-	// we'll adopt a js-array-like convention of returning -1
+	// we'll adopt a convention of returning -1
 	return -1;
 }
 
 var CYOANode = function (storySection, choices, page){
-	this.page = page; // to help us keep track of if we've seen this node
-	this.data = storySection; // the section of the story starting at this page
-	// "Once upon a time... "
-	this.children = choices;	// the choices of pages/CYOANodes that we can go to from here
-	// {255: CYOANode@2987293423, 216: CYOANode@2982552923842, 200: CYOANode@2034923902552}
+	this.page = page; 		// number, helps us keep track of if we've seen this node
+	this.data = storySection; 	// string, the section of the story starting at this page
+	this.children = choices;	// array, holds the CYOANodes that we can go to directly from this one
 }
 
 CYOANode.prototype.isHappyEnding = function(){
@@ -60,25 +58,26 @@ CYOANode.prototype.addChoice = function(choiceNode){
 	this.children.push(choiceNode);
 }
 
-var pg
-var pg220 = new CYOANode("pg220 Congratulations!", [], 220);
-var pg234 = new CYOANode("pg234 Congratulations!", [], 234);
-var pg260 = new CYOANode("pg260", [], 260);
-var pg204 = new CYOANode("pg204", [pg220, pg234], 204);
-var pg255 = new CYOANode("pg255", [pg204, pg260], 255);
-var pg216 = new CYOANode("pg216", [pg204, pg220], 216);
-var pg201 = new CYOANode("pg201", [pg255, pg216], 201);
-var book = new CYOAGraph(pg201);
-//			 ------- 
-//			/		\
-// 		216  		  220W
-// 	/ 		\		/ 
-// 201 			204  
-// 	\		/		\
-// 		255 		  234W	
-// 			\
-// 				260L
 
+var pg220 = new CYOANode("pg220 text -- Congratulations!", [], 220);
+var pg234 = new CYOANode("pg234 text -- Congratulations!", [], 234);
+var pg260 = new CYOANode("pg260 text -- You have died.", [], 260);
+var pg204 = new CYOANode("pg204 text", [pg220, pg234], 204);
+var pg255 = new CYOANode("pg255 text", [pg204, pg260], 255);
+var pg216 = new CYOANode("pg216 text", [pg204, pg220], 216);
+var pg201 = new CYOANode("pg201 text", [pg255, pg216], 201);
+
+//			     ------- 
+//			/		\
+// 		216  		          220W
+// 	/ 		\		/ 
+// 201 			       204  
+// 	\		/		\
+// 		255 		         234W	
+// 			\
+// 		  	  260L
+
+var book = new CYOAGraph(pg201);
 console.log(book.findEarlyWin())  // 2
 
 var loserBook = new CYOAGraph(pg260);
