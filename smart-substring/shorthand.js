@@ -9,6 +9,7 @@ var smartSubstring = function(str){
 	var i=0;
 	while(i<str.length){
 		if (/\s/.test(str[i])){
+			foundWhiteSpace = true;
 			// we're at the end of the current word
 			currentWord = str.slice(currentWordStart, i);
 			if (currentWord.trim() === "and"){
@@ -21,7 +22,7 @@ var smartSubstring = function(str){
 			} else {
 				return output.join("");
 			}
-		} else if (i > 40){
+		} else if (i > 40 && output.length === 0){
 			// we've reached the end of the alotted characters without finding any whitespace
 			return "";
 		}
