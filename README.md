@@ -23,14 +23,12 @@ You have an array of numbers representing the heights of buildings on a perfectl
 [4, 2, 1, 3]
 ```
 
-Given solution run time: O(n), where n is the length of the array.
-
 
 
 ## Choose Your Earliest Win
 
 **Difficulty**: Hard    
-**Concept**: Trees     
+**Concept**: Trees, Breadth First Search     
 **Extension**: Directed Acyclic Graphs   
 
 A choose your own adventure book is composed of chunks of a story.   The book gives readers a choice at the end of each chunk about what the main character in the story should do.  Each option sends the reader to a different page to read another chunk of the story that says what happens based on their decision.
@@ -46,7 +44,7 @@ To run back to the clearing, go to page 200.
 
 Choose your own adventure books can usually either end happily, or end badly (with the main character's death/capture/etc).  Write a program to find the minimum number of decisions that could lead to a happy ending, in a choose your own adventure book. Assume that there is only one path to each ending.  Assume also that no story choices lead back to pages that have already been read.
 
-Given solution run time: O(n), where n is the number of story chunks.  
+
 
 **Bonus**: Sometimes authors do want to have two paths through the story converge. Modify your approach to let multiple paths lead to the same ending. Still assume that no story choices lead back to pages that have already been read.
 
@@ -68,12 +66,11 @@ First 40 characters: `"A star is a luminous sphere of plasma he"`.
 Smarter approach: `"A star is a luminous sphere of plasma"`.
 
 
-Given solution run time: O(1), since it only looks up to 41 characters into the string.  
+
 
 **Bonus**: Modify your function so that we can use shorthand to save characters, by replacing the word "and" with "&".
 
 
-Given bonus solution run time: O(1), since we'd only have to check up to like 82.
 
 
 
@@ -107,6 +104,5 @@ Sam loves to hop up stairs. Each time she moves up stairs, she either hops up on
 Write a function that, given a number of stairs, calculates how many ways Sam could possibly hop up that many stairs. 
 
 
-Given solution run time: O(n), where n number of stairs.  
 
 **Bonus**: Sam has learned to hop 3 steps at a time (so, for example, she could go from the ground to the third step!).  Write a function to calculate how many ways Sam could hop up a given number of stairs with this new skill.
