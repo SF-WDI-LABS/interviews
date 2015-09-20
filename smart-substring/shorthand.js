@@ -21,13 +21,16 @@ var smartSubstring = function(str){
 			} else {
 				return output.join("");
 			}
+		} else if (i > 40){
+			// we've reached the end of the alotted characters without finding any whitespace
+			return "";
 		}
 		i++;
 	} 
-	// at this point, we must have gone through the whole string
-	// and ended with a letter.
+	// at this point, we must have gone through the whole string,
+	// found at least one word, and ended with a letter
 
-	// check if this last word can fit in our 40 chars
+	// check if the last word can fit in our 40 chars
 	currentWord = str.slice(currentWordStart, i);
 	if (currentWord.trim() === "and"){
 		currentWord = currentWord.replace(/and/, "&");
