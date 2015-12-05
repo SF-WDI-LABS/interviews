@@ -1,5 +1,11 @@
 # Interviews
 
+This repo contails READMEs and solutions for 4 interview problems. Their basic problem statements are also below.
+
+Please choose a problem that you feel comfortable with and that you think is appropriate for the candidate. 
+
+Most of the solutions provided are more efficient than a naive or brute force solution, but the candidate may start with a brute force solution. Ask the candidate to run through some test cases to check that their solution works.
+
 
 ## Rainy City
 
@@ -23,7 +29,7 @@ You have an array of numbers representing the heights of buildings on a perfectl
 ## Choose Your Earliest Win
 
 **Difficulty**: Hard    
-**Concept**: Trees     
+**Concept**: Trees, Breadth First Search     
 **Extension**: Directed Acyclic Graphs   
 
 A choose your own adventure book is composed of chunks of a story.   The book gives readers a choice at the end of each chunk about what the main character in the story should do.  Each option sends the reader to a different page to read another chunk of the story that says what happens based on their decision.
@@ -37,8 +43,11 @@ To ask the fairy about the Sword of Truth, go to page 43.
 To run back to the clearing, go to page 200.
 ```
 
-Choose your own adventure books can usually either end happily, or end badly (with the main character's death/capture/etc).  Write a program to find the minimum number of decisions that could lead to a happy ending, in a choose your own adventure book.
+Choose your own adventure books can usually either end happily, or end badly (with the main character's death/capture/etc).  Write a program to find the minimum number of decisions that could lead to a happy ending, in a choose your own adventure book. Assume that there is only one path to each ending.  Assume also that no story choices lead back to pages that have already been read.
 
+
+
+**Bonus**: Sometimes authors do want to have two paths through the story converge. Modify your approach to let multiple paths lead to the same ending. Still assume that no story choices lead back to pages that have already been read.
 
 ## Smart Substring
 
@@ -56,7 +65,10 @@ First 40 characters: `"A star is a luminous sphere of plasma he"`.
 
 Smarter approach: `"A star is a luminous sphere of plasma"`.
 
-**Extension**: Modify your function so that we can use shorthand to save characters, by replacing "and" with "&".
+
+**Bonus**: Modify your function so that we can use shorthand to save characters, by replacing the word "and" with "&".
+
+
 
 
 
@@ -67,7 +79,28 @@ Smarter approach: `"A star is a luminous sphere of plasma"`.
 **Extension**: Dynamic Programming  
 
 Sam loves to hop up stairs. Each time she moves up stairs, she either hops up one step, or hops up two steps.  For 4 stairs, two possible paths she might take are:
-* ground, to 1, to 3, to 4, or
-* ground, to 2, to 4
 
-Write a function that, given a number of stairs, calculates how many ways my neice could possibly hop up that many stairs. 
+
+* ground, to first, to third, to fourth
+```
+                  __3__
+              _2_|
+          ___|
+      _1_|
+ ____|
+```
+
+* ground, to second, to fourth
+```
+                  __2__
+              ___|
+          _1_|
+      ___|
+ ____|
+```
+
+Write a function that, given a number of stairs, calculates how many ways Sam could possibly hop up that many stairs. 
+
+
+
+**Bonus**: Sam has learned to hop 3 steps at a time (so, for example, she could go from the ground to the third step!).  Write a function to calculate how many ways Sam could hop up a given number of stairs with this new skill.
