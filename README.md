@@ -41,30 +41,6 @@ To run back to the clearing, go to page 200.
 
 Choose your own adventure books can usually either end happily, or end badly (with the main character's death/capture/etc).  Write a program to find the minimum number of decisions that could lead to a happy ending, in a choose your own adventure book.
 
-<!--## Awkward Teddy-->
-
-<!--You're working on a robotic teddy bear toy that will teach children basic tasks. It's working for task lists that can happen in any order, like gathering each toy into the toy bin. Unfortunately, the teddy bear doesn't do very well with tasks with prerequisites. For example, the teddy bear has a tendency to congratulate users who dress a doll by putting its socks on over its shoes, or its underwear on after its pants. -->
-
-<!--```-->
-<!--Gathering Toys-->
-<!--* put the giraffee into the toy bin-->
-<!--* put the blocks into the toy bin-->
-<!--* put the doll into the toy bin-->
-<!--```-->
-
-<!--```-->
-<!--Getting Dressed-->
-<!--* put on socks-->
-<!--* put on shirt-->
-<!--* put on pants-->
-<!--* put on shoes-->
-<!--* put on underwear-->
-<!--```-->
-
-<!--Key questions:-->
-<!--* What kind of input does the teddy bear get now? (unordered lists of actions that have to be taken)-->
-
-
 
 ## Smart Substring
 
