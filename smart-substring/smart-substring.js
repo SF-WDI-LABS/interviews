@@ -27,7 +27,7 @@ var smartSubstring = function(str){
 
 	// we'll return an empty string
 	return "";
-}
+};
 
 var tests = [
 	{input: "", expected: ""},
