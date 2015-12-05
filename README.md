@@ -18,8 +18,6 @@ You have an array of numbers representing the heights of buildings on a perfectl
 ```
 
 
-Note: This can be solved with only 2 passes through the array, but start with any working solution.  
-
 
 
 ## Choose Your Earliest Win
