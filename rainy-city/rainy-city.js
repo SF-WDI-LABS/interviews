@@ -49,6 +49,9 @@ function water(arr){
 
 }
 
+// Note that the two for loops in the solution above could be combined into one if we tracked
+// two separate potential values. This would be slightly more efficient but perhaps less readable.
+
 
 function maxIndex(arr){
 	// solution strategy will require us to know the index of the max 
