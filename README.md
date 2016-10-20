@@ -102,12 +102,19 @@ You have an array of numbers representing the heights of buildings on a perfectl
 A choose your own adventure book is composed of chunks of a story.   The book gives readers a choice at the end of each chunk about what the main character in the story should do.  Each option sends the reader to a different page to read another chunk of the story that says what happens based on their decision.
 
 ```
-...
+                                                         1
+                                                         
+You pedal as fast as you can away from the bullies -- but
+your bike chain slips off right in front of the haunted 
+house!
 
 What will you do?
-To release the fairy from the jar, go to page 89.
-To ask the fairy about the Sword of Truth, go to page 43.
-To run back to the clearing, go to page 200.
+
+To walk your bike home, go to page 7.
+To stay outside and try to repair your bike, go to page 12.
+To leave your bike and run the rest of the way home, go to 
+   page 20.
+To approach the haunted house, go to page 4.
 ```
 
 Choose your own adventure books can usually either end happily, or end badly (with the main character's death/capture/etc).  Write a program to find the minimum number of decisions that could lead to a happy ending, in a choose your own adventure book. Assume that there is only one path to each ending.  Assume also that no story choices lead back to pages that have already been read.
