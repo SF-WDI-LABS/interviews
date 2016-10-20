@@ -1,4 +1,4 @@
-# Interviews
+# Mock Interview Resources
 
 This repo contains a set of non-whiteboarding technical questions in the `content-questions` directory. Please feel free to ask whatever you'd like; these are suggestions to draw from.
 
