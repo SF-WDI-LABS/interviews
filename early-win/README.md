@@ -24,6 +24,14 @@ To leave your bike and run the rest of the way home, go to
 To approach the haunted house, go to page 4.
 ```
 
+```
+                                                        20
+                                                         
+Congratulations! You've lost your bike, but you kept your 
+lunch money - and your sanity!
+```
+
+
 
 Choose your own adventure books can usually either end happily, or end badly (with the main character's death/capture/etc).  Write a program to find the minimum number of decisions that could lead to a happy ending, in a choose your own adventure book. Assume that there is only one path to each ending.  Assume also that no story choices lead back to pages that have already been read.
 
